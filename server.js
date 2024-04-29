@@ -32,10 +32,20 @@ app.post('/register', register.handleRegister(db, bcrypt) );
     // What we do with bcrypt and db is a dependency injection
     // the req and res are implicitely being given to the function as parameters.
 app.post('/signin', signin.handleSignin(db, bcrypt) );
-
 app.get('/profile:id', profile.handleGetUser(db) );
-
 app.put('/image', (req, res) => { image.handlePutImage(req, res, db) });
+app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)});
+
+
+
+
+
+
+
+
+
+
+
 
 
 app.listen(3000, ()=> {
