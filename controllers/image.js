@@ -16,7 +16,7 @@ const handleApiCall = (req, res) => {
     const USER_ID = 'norris52';       
     const APP_ID = 'smart-brain';
     const MODEL_ID = 'face-detection';
-    const IMAGE_URL = imageURL;
+    const IMAGE_URL = req.body.input;
     const raw = JSON.stringify({
       "user_app_id": {
         "user_id": USER_ID,
