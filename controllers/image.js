@@ -48,5 +48,6 @@ const handleApiCall = (req, res) => {
 }
 
 module.exports = {
-    handlePutImage: handlePutImage
+    handlePutImage: handlePutImage,
+    handleApiCall: handleApiCall
 };
