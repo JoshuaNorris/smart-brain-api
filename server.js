@@ -20,11 +20,9 @@ app.get('/', (req, res) => {
 const db = knex({
   client: 'pg',
   connection: {
-    host: '127.0.0.1',
-    user: 'joshnorris',
-    password: '',
-    database: 'smart-brain',
-  },
+    host: process.env.DATABASE_URL,
+    ssl: true
+  }
 });
 
 
