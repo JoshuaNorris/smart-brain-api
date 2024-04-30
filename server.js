@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 const db = knex({
   client: 'pg',
   connection: {
-    host: process.env.DATABASE_URL,
+    connectionString: process.env.DATABASE_URL,
     ssl: true
   }
 });
